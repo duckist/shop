@@ -315,6 +315,7 @@
         var total = (quantity * pricePerUnit) + shippingFee;
 
         var paymentMethod = document.querySelector('input[name="radioGroup"]:checked').value;
+        var currentPageURL = window.location.href;
 
         var jsonData = {
             formData: formData,
@@ -327,6 +328,7 @@
                 ownerid: owner_id,
             },
             paymentMethod: paymentMethod,
+            currentPageURL: currentPageURL,
         };
 
         var jsonString = JSON.stringify(jsonData);
